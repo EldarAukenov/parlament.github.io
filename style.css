@@ -1,0 +1,485 @@
+/* Подключение нового шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Основные стили для шапки */
+.bg{
+    background-color: #F8F7F4;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #006c7d;
+    color: #fff;
+    font-family: 'Roboto', sans-serif; /* Используем новый шрифт */
+}
+.nav{
+    margin-left:-800px;
+}
+/* Стили для ссылок в меню */
+.nav__link {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+/* Логотип */
+.logo {
+    width: 150px;
+    height: 100px;
+    background-image: url('logo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Размещение логотипа и ссылок для языков */
+.logo-and-languages {
+    display: flex;
+    align-items: center;
+}
+
+.language-links {
+    margin-left: 15px;
+}
+
+.language-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 5px;
+}
+
+.language-link:hover {
+    text-decoration: underline;
+}
+.photo-positioning {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.photo-positioning img {
+    margin: 0 5px;
+}
+
+.photo-row {
+    width: 930px;
+    height: auto;
+}
+
+/* Базовые стили для секций */
+.section {
+    padding: 80px;
+    max-width: 1200px;
+    margin: 20px auto;
+    opacity: 0; /* Исходная невидимость */
+    transition: opacity 1.5s ease; /* Плавный переход */
+}
+
+/* Видимость секций при добавлении класса */
+.section.visible {
+    opacity: 1;
+}
+
+/* Стили для секции "О нас" */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:30px;
+    margin-top: -50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 2.5em;
+    color: #FFD700; /* Золотой цвет для заголовков */
+    font-family: 'Roboto', sans-serif; /* Используем новый шрифт */
+}
+
+.about-text p {
+    font-size: 1.1em;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Используем новый шрифт */
+}
+.sobytia{
+    font-size: 1.1em;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Используем новый шрифт */
+}
+/* Стили для иконки в секции "О нас" */
+.about-icon {
+    width: 600px;
+    height: 500px;
+    background-image: url('logo-school.jpeg'); /* Путь к изображению иконки */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.movings{
+    margin-top: 75px;
+}
+.members-icon {
+    margin-left: 75px;
+    width: 300px;
+    height: 300px;
+    background-image: url('icon.webp'); /* Путь к изображению иконки */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Плавное появление для других секций */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+/* Стили для заголовков в других секциях */
+h2 {
+    font-size: 2.5em;
+    color: #FFD700; /* Золотой цвет для заголовков */
+    font-family: 'Roboto', sans-serif; /* Используем новый шрифт */
+}
+
+.parl-text {
+    font-size: 1.1em;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Используем новый шрифт */
+}
+
+.center-button {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-column {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Adjusted gap between button rows */
+    justify-content: center;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adjusted gap between buttons in each row */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+}
+.news-box{
+    margin-top: 200px;
+    gap:275px;
+    display: flex;
+}
+
+.button-row > .anchor-button-container {
+    width: 200px; /* Fixed width for the buttons */
+}
+
+/* Styling for each row to ensure there are 3 buttons per row and the last row has 2 buttons */
+.button-row:nth-child(1) {
+    justify-content: space-around;
+}
+
+.button-row:nth-child(2) {
+    justify-content: space-around;
+}
+
+.button-row:nth-child(3) {
+    justify-content: center;
+}
+
+.anchor-button-container {
+    text-align: center;
+    width: 200px; /* фиксированная ширина контейнера */
+    padding: 10px;
+    background-color: #006c7d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anchor-button-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.crown-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0; /* расстояние между фото и кнопкой */
+}
+
+.button-photo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* расстояние между фото и кнопкой */
+    border-radius: 5px; /* слегка закругленные углы */
+}
+
+.anchor-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #006c7d;
+    color: white;
+    border: 2px solid #white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.anchor-button:hover {
+    background-color: #015461;
+    border-color: white;
+}
+.anchor-button-container.active .anchor-text {
+    max-height: 200px; /* Убедитесь, что это значение достаточно для вашего контента */
+}
+.anchor-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 20px;
+}
+.upper-text{
+	color:white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1em;
+}
+.news-item-container {
+    text-align: center;
+    width: 700px; /* фиксированная ширина контейнера */
+    padding: 30px;
+    background-color: #006c7d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.crown-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0; /* расстояние между фото и кнопкой */
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* расстояние между фото и кнопкой */
+    border-radius: 5px; /* слегка закругленные углы */
+}
+
+/* Стиль кнопок по умолчанию */
+.toggle-button {
+    width: 400px;
+    padding: 50px; /* Увеличение внутреннего отступа */
+    font-size: 30px; /* Увеличение шрифта */
+    background-color: #006c7d; /* Основной цвет кнопки */
+    color: white; /* Цвет текста */
+    border: 2px solid white; /* Цвет рамки */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Плавный переход при изменении цвета и трансформации */
+}
+
+/* Стиль кнопок при наведении */
+.toggle-button:hover {
+    background-color: #015461; /* Изменение цвета фона при наведении */
+    border-color: white; /* Изменение цвета рамки при наведении */
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+
+.news-item-container.active .news-content {
+    max-height: 200px; /* Убедитесь, что это значение достаточно для вашего контента */
+}
+
+.news-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 20px; 
+}
+
+.news-title {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+}
+
+/* Стили для контейнера кнопки */
+.video-button-container {
+    text-align: center;
+    width: 800px;
+    height:auto;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+/* Кнопки для раскрытия видео */
+.video-toggle-button {
+    width: 400px;
+    padding: 10px;
+    background-color: #006c7d; /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.video-toggle-button:hover {
+    background-color: #015461;
+}
+
+/* Скрытые видео (используем max-height для плавного раскрытия) */
+.video-content {
+    max-height: 0; /* Скрыто по умолчанию */
+    overflow: hidden; /* Прячем контент, который выходит за пределы max-height */
+    transition: max-height 0.5s ease-out; /* Плавный переход для раскрытия */
+    margin-top: 15px;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Видео внутри контейнера */
+.video-content video {
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.event-video-container {
+    text-align: center;
+    width: ;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+/* Кнопки для раскрытия видео */
+.toggle-video-button {
+    width: 800px;
+    padding: 10px;
+    background-color: #006c7d; /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-video-button:hover {
+    background-color: #015461;
+}
+
+/* Скрытые видео (используем max-height для плавного раскрытия) */
+.event-video-content {
+    max-height: 0px; /* Скрыто по умолчанию */
+    overflow: hidden; /* Прячем контент, который выходит за пределы max-height */
+    transition: max-height 0.5s ease-out; /* Плавный переход для раскрытия */
+    margin-top: 15px;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Видео внутри контейнера */
+.event-video-content video {
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vid-container{
+    display:flex;
+    gap:300px;
+}
+
+
+
+
+/* Стили для футера */
+.footer {
+    background-color: #015461; /* Цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    width: 100%; /* Футер будет занимать всю ширину экрана */
+    position: relative; /* Чтобы футер был внизу страницы */
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    display: flex; /* Используем flexbox для горизонтального выравнивания */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    max-width: 1200px; /* Ограничиваем максимальную ширину содержимого */
+    margin: 0 auto; /* Центрируем футер по горизонтали */
+    height: 90px;
+}
+
+.footer p {
+    margin: 0; /* Убираем отступы */
+    font-size: 1.1em; /* Размер шрифта */
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-links {
+    display: flex; /* Размещаем ссылки в одну строку */
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.width {
+    width: 100%;
+}
+
+.logo1 {
+    width: 150px;
+    height: 100px;
+    background-image: url('logo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+html {
+    scroll-behavior: smooth; /* Включаем плавную прокрутку */
+}
