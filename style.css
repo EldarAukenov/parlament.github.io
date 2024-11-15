@@ -531,9 +531,10 @@ h2 {
 
     /* Уменьшаем размер кнопки .toggle-video-button */
     .toggle-video-button {
-        width: 100%;
-        font-size: 1em;
-        padding: 8px;
+        width: 250px; /* Уменьшенная ширина кнопки */
+        font-size: 0.9em; /* Меньший размер шрифта */
+        padding: 6px; /* Уменьшенные отступы */
+        border-radius: 4px; /* Немного меньшая закругленность */
     }
 }
 html {
