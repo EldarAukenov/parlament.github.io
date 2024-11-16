@@ -1,0 +1,200 @@
+/* Подключение нового шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Основной стиль для всего сайта */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6; /* Светлый серый фон */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Стили для шапки */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #006c7d; /* Темно-синий фон */
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    color: #50c8e0; /* Светлый акцент */
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    background-image: url('logo.jpg'); /* Подключите своё изображение */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Секции */
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+/* Появление секции */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1, h2 {
+    color: #283e4a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Описание человека */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.parl-text{
+	margin-top:10px;
+}
+.text-description{
+	font-size: 1em;
+    text-align: justify;
+}
+.about-icon {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url('photo7.jpeg'); /* Добавьте фото */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопки и проекты */
+.anchor-button-container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #006c7d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+}
+
+.anchor-button-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.anchor-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    background-color: #50c8e0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.anchor-button:hover {
+    background-color: #3ba5b6;
+}
+
+.anchor-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    color: white;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.anchor-button-container.active .anchor-text {
+    max-height: 1000px; /* Достаточно для текста */
+}
+
+/* Секция с навыками */
+.photo-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.photo-row img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.photo-row img:hover {
+    transform: scale(1.1);
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-icon {
+        width: 200px;
+        height: 200px;
+    }
+
+    .photo-row img {
+        width: 100px;
+        height: 100px;
+    }
+}
+html {
+    scroll-behavior: smooth; /* Включаем плавную прокрутку */
+}
