@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адамның сипаттамасы</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body class="bg">
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo-and-languages">
+            <div class="logo"></div>
+        </div>
+        <nav class="nav">
+            <a href="#about" class="nav__link">Парламент мүшесі</a>
+            <a href="#skills" class="nav__link">Сипаттама</a>
+            <a href="#projects" class="nav__link">Жоспарлар</a>
+            <a class="nav__link" href="indiex.html">Парламент сайтына қайту</a>
+        </nav>
+    </header>
+
+    <!-- Адамның сипаттамасы -->
+    <section id="about" class="section about-content">
+        <div class="about-text">
+            <h1>КАШКИНА АЛЕКСАНДРА</h1>
+            <p>Министрлік жұмысын үйлестіреді, мектепте ережелердің сақталуын бақылайды және оқушылар арасында құқықтық сауаттылықты арттыруға арналған іс-шаралар ұйымдастырады.</p>
+        </div>
+        <div class="about-icon"></div>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills" class="section">
+        <h2>СИПАТТАМА</h2>
+        <p class="parl-text">Бұл бөлім министрдің жоспарларын сипаттайды — МИНИСТР "ҚҰҚЫҚТЫҚ ТӘРТІП ЖӘНЕ ҚОҒАМДЫҚ ҚАУІПСІЗДІК"</p>
+        <p class="text-description">
+            Аты-жөні: Кашкина Александра
+            <br>
+            Сынып: 10 "A"
+            <br>
+            Министрлік туралы:
+            Министрлік мектепте тәртіпті сақтаумен, жанжалдар мен құқық бұзушылықтардың алдын алу, сондай-ақ барлық білім беру үдерісінің қатысушылары үшін қауіпсіз және жайлы атмосфера қалыптастырумен айналысады.
+        </p>        
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects" class="section">
+        <h2>ЖОСПАРЛАР</h2>
+        <div class="button-column">
+            <div class="anchor-button-container">
+                <button class="anchor-button">ЖОСПАР 2024 - 1 БЕТ</button>
+                <div class="anchor-text">
+                    <img src="PHPLAN12.png" alt="ФОТО" class="button-photo">
+                </div>
+            </div>
+        </div>
+        <div class="button-column">
+            <div class="anchor-button-container">
+                <button class="anchor-button">ЖОСПАР 2024 - 2 БЕТ</button>
+                <div class="anchor-text">
+                    <img src="PHPLAN13.png" alt="ФОТО" class="button-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Скрипты -->
+    <script>
+        // Проект сипаттамаларын көрсету/жасыру
+        document.querySelectorAll('.anchor-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const container = button.parentElement;
+                container.classList.toggle('active');
+            });
+        });
+
+        // Парақтың пайда болуы кезінде тегіс айналу
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
