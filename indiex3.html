@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адамның сипаттамасы</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body class="bg">
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo-and-languages">
+            <div class="logo"></div>
+        </div>
+        <nav class="nav">
+            <a href="#about" class="nav__link">Парламент мүшесі</a>
+            <a href="#skills" class="nav__link">Сипаттама</a>
+            <a href="#projects" class="nav__link">Жоспарлар</a>
+            <a class="nav__link" href="indiex.html">Парламент сайтына қайту</a>
+        </nav>
+    </header>
+
+    <!-- Описание человека -->
+    <section id="about" class="section about-content">
+        <div class="about-text">
+            <h1>МИМУЛАТОВА ЗАИРА</h1>
+            <p>
+                Қазақ халқының мәдени дәстүрлерін, әдет-ғұрыптарын және өнерін сақтап, насихаттау міндетін атқарады. Ұлттық мерекелерге арналған іс-шаралар ұйымдастырады,
+                шығармашылық байқаулар, көрмелер және тақырыптық кештер өткізіп, мәдени бірлікті нығайту және ұлттық мұраға деген мақтаныш сезімін арттыруға бағытталған.
+            </p>
+        </div>
+        <div class="about-icon"></div>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills" class="section">
+        <h2>СИПАТТАМА</h2>
+        <p class="parl-text">Бұл блок парламент мүшесінің жоспарларын сипаттайды - МИНИСТРІ "МӘДЕНИЕТ ЖӘНЕ ҰЛТТЫҚ МҰРА"</p>
+        <p class="text-description">
+            Аты-жөні: Мимулатова Заира
+            <br>
+            Сынып: 10 "Б"
+            <br>
+            Бұл парламент бөлімі туралы:
+            "Мәдениет және ұлттық мұра" министрлігі мәдени дәстүрлерді, тарихи және ұлттық мұраны сақтап, дамытуға бағытталған. Өнер, мәдениет және шығармашылықты насихаттайтын іс-шараларды ұйымдастырады. 
+            Тарихи құндылықтарды зерттеуге және сақтауға арналған жобаларды үйлестіреді, сондай-ақ мәдени ағарту және ұлттық сананы нығайту жөніндегі бастамаларды қолдайды.
+        </p>
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects" class="section">
+        <h2>ЖОСПАРЛАР</h2>
+        <div class="button-column">
+            <div class="anchor-button-container">
+                <button class="anchor-button">ЖОСПАР 2024 - 1 БЕТ</button>
+                <div class="anchor-text">
+                    <img src="PHPLAN3.png" alt="ФОТО" class="button-photo">
+                </div>
+            </div>
+            <div class="anchor-button-container">
+                <button class="anchor-button">ЖОСПАР 2024 - 2 БЕТ</button>
+                <div class="anchor-text">
+                    <img src="PHPLAN4.png" alt="ФОТО" class="button-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Скрипты -->
+    <script>
+        // Раскрытие/скрытие описания проектов
+        document.querySelectorAll('.anchor-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const container = button.parentElement;
+                container.classList.toggle('active');
+            });
+        });
+
+        // Плавное появление секций при прокрутке
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
