@@ -4,8 +4,12 @@
 /* Основные стили для шапки */
 .bg{
     background-color: #F8F7F4;
+	padding-top:140px;
 }
 .header {
+	position:fixed;
+	top:0;
+	z-index:100;
     display: flex;
     justify-content: space-between;
     align-items: center;
