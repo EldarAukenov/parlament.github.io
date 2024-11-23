@@ -4,6 +4,7 @@
 /* Основные стили для шапки */
 .bg{
     background-color: #F8F7F4;
+	padding-top:140px;
 }
 .header {
     display: flex;
@@ -12,6 +13,10 @@
     padding: 20px;
     background-color: #006c7d;
     color: #fff;
+	positon:fixed;
+	width:100%;
+	top:0;
+	z-index:100;
     font-family: 'Roboto', sans-serif; /* Используем новый шрифт */
 }
 .nav{
