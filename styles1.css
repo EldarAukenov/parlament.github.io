@@ -1,0 +1,138 @@
+/* Подключение шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Основные стили для страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8F7F4;
+    color: #333;
+}
+
+/* Контейнер для анимации */
+#page-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    animation: pageFlipIn 1.5s linear;
+}
+
+/* Анимация при переходе на страницу */
+@keyframes pageFlipIn {
+    0% {
+        transform: perspective(1500px) rotateY(-120deg) scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: perspective(1500px) rotateY(-60deg) scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: perspective(1500px) rotateY(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Анимация при переходе на новый сайт */
+@keyframes pageFlipOut {
+    0% {
+        transform: perspective(1500px) rotateY(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: perspective(1500px) rotateY(60deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: perspective(1500px) rotateY(120deg);
+        opacity: 0;
+    }
+}
+
+/* Шапка страницы */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #006c7d;
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Заголовок секции */
+.section-header {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5em;
+    color: #FFD700;
+}
+
+/* Сетка для видео */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Элемент видео */
+.video-item {
+    background-color: #006c7d;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.video-item video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Кнопка "Вернуться назад" */
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #006c7d;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Центрируем текст внутри кнопки */
+    margin-left: auto;
+    margin-right: auto; /* Центрируем кнопку по ширине */
+    display: block; /* Это позволяет кнопке занимать всю ширину родительского контейнера */
+}
+
+.back-btn:hover {
+    background-color: #004d5c;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 1.2em;
+    }
+}
